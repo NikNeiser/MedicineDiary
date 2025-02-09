@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TelegramBot", "TelegramBot"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3A67B23B-CEE4-48F7-9B31-81690966C9C2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{46BD102D-38AA-4880-A71E-6C7481A67A96}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BotLogic", "BotLogic", "{46BD102D-38AA-4880-A71E-6C7481A67A96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineDiary.Data", "MedicineDiary.Data\MedicineDiary.Data.csproj", "{D09F4635-FF2C-4DEE-819D-313C599FF2F5}"
 EndProject
@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{12F386
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineDiary.Models", "MedicineDiary.Models\MedicineDiary.Models.csproj", "{FB080DD4-EDE3-44C7-A856-A84F046DA645}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineDiary.Controllers", "MedicineDiary.Controllers\MedicineDiary.Controllers.csproj", "{B0756159-7874-4D48-B6BE-2C4F394ECA0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineDiary.BotLogic", "MedicineDiary.BotLogic\MedicineDiary.BotLogic.csproj", "{B0756159-7874-4D48-B6BE-2C4F394ECA0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
