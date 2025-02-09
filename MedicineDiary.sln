@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineDiary.Models", "MedicineDiary.Models\MedicineDiary.Models.csproj", "{FB080DD4-EDE3-44C7-A856-A84F046DA645}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineDiary.BotLogic", "MedicineDiary.BotLogic\MedicineDiary.BotLogic.csproj", "{B0756159-7874-4D48-B6BE-2C4F394ECA0B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D09F4635-FF2C-4DEE-819D-313C599FF2F5} = {D09F4635-FF2C-4DEE-819D-313C599FF2F5}
+		{FB080DD4-EDE3-44C7-A856-A84F046DA645} = {FB080DD4-EDE3-44C7-A856-A84F046DA645}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
