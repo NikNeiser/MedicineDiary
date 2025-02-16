@@ -2,6 +2,6 @@
 {
     internal interface IHandler
     {
-        Task HandleAsync(string message);
+        Task<string> HandleAsync(long chatId, string message);
     }
 }

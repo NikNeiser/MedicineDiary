@@ -6,10 +6,8 @@ namespace MedicineDiary.BotLogic
 {
     public class BotLogicFactory
     {
-        public IBotLogic GetBotLogic(MessengerEnum messenger)
-        {
-            return new BotLogic(messenger);
-        }
+        public IBotLogic GetBotLogic(string connection, MessengerEnum messenger)
+            => new BotLogic(connection,messenger);
     }
 
 }

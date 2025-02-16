@@ -1,17 +1,16 @@
 ﻿using MedicineDiary.BotLogic.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MedicineDiary.Data.Abstraction;
+using MedicineDiary.Models.Enums;
 
 namespace MedicineDiary.BotLogic.Handlers
 {
-    internal class NoRegistredHandler : IHandler
+    internal class NoRegistredHandler : HandlerBase, IHandler
     {
-        public Task HandleAsync(string message)
+        public async Task<string> HandleAsync(long chatId, string message)
         {
-            throw new NotImplementedException();
+            await base._repository.SetChatState(chatId,ChatStateEnum.AddChatTime);
+            return "GetTimeMessage";
         }
+        public NoRegistredHandler(IDiaryRepository repository): base(repository) { }
     }
 }

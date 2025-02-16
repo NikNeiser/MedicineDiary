@@ -2,9 +2,9 @@
 {
     public interface IBotLogic
     {
-        string MessageHandler(string message);
-        string TextMessageHandler(string message);
-        string ComandHandler(string message);
+        Task<string> MessageHandler(long chatId, string message);
+        Task<string> TextMessageHandler(long chatId, string message);
+        Task<string> ComandHandler(long chatId, string message);
     }
 
 }
