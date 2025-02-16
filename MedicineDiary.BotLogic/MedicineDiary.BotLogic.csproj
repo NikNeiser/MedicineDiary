@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MedicineDiary.Data\MedicineDiary.Data.csproj" />
+    <ProjectReference Include="..\MedicineDiary.Models\MedicineDiary.Models.csproj" />
+  </ItemGroup>
+
 </Project>
