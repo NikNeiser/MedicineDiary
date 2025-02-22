@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BotLogic", "BotLogic", "{46BD102D-38AA-4880-A71E-6C7481A67A96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicineDiary.Data", "MedicineDiary.Data\MedicineDiary.Data.csproj", "{D09F4635-FF2C-4DEE-819D-313C599FF2F5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FB080DD4-EDE3-44C7-A856-A84F046DA645} = {FB080DD4-EDE3-44C7-A856-A84F046DA645}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{12F386C8-0ADF-4F56-926C-94A19393C6D8}"
 EndProject
