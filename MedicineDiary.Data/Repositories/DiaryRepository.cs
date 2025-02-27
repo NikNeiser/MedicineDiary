@@ -26,11 +26,10 @@ namespace MedicineDiary.Data.Repositories
             using var connection = new NpgsqlConnection(base._connectionString);
 
             var parameters = new DynamicParameters();
-            parameters.Add("@messenger", base._messenger.ToString());
             parameters.Add("@state", ((int)chatState));
             parameters.Add("@id", id);
 
-            var query = @"UPDATE @messenger.users SET ""state"" = @state WHERE ""chatId"" = @id;";
+            var query = $"UPDATE {base._messenger.ToString()}.users SET \"state\" = @state WHERE \"chatId\" = @id;";
             await connection.ExecuteAsync(query,parameters);
             return chatState;
         }
