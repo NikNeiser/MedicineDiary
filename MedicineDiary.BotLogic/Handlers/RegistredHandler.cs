@@ -10,10 +10,11 @@ namespace MedicineDiary.BotLogic.Handlers
 {
     internal class RegistredHandler : HandlerBase, IHandler
     {
-        public Task<string> HandleAsync(string message)
+        public Task<string> HandleAsync(long chatId, string message)
         {
             throw new NotImplementedException();
         }
+
         public RegistredHandler(IDiaryRepository repository) : base(repository) { }
     }
 }

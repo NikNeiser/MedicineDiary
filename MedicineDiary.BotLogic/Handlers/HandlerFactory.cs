@@ -4,7 +4,7 @@ using MedicineDiary.Models.Enums;
 
 namespace MedicineDiary.BotLogic.Handlers
 {
-    static class HandlerFactory
+    public static class HandlerFactory
     {
         public static Dictionary<ChatStateEnum, IHandler> GetHandlers( IDiaryRepository repository) =>
             new Dictionary<ChatStateEnum, IHandler> {
