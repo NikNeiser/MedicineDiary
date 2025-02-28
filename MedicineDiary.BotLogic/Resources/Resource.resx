@@ -125,7 +125,19 @@
     <comment>Переменные: 0 - название препарата, 1-рвд, 2-кол-во дней, 3 - всего приёмов, 4 - список времени приёма</comment>
   </data>
   <data name="GetTimeMessage" xml:space="preserve">
-    <value>Для определения часового пояса требуется ввести твоё текущее время в формате ЧЧ:MM</value>
+    <value>Для определения часового пояса требуется ввести твоё текущее время в 24-часовом формате ЧЧ:MM</value>
     <comment>Просьба ввести время</comment>
+  </data>
+  <data name="TimeSet_WrongTimeFormat" xml:space="preserve">
+    <value>Ошибка при установке времени, введите еще раз ваше текушее время в 24-часовом формате ЧЧ:ММ (напимер 14:46)</value>
+    <comment>Общая ошибка парсинга значения</comment>
+  </data>
+  <data name="TimeSet_Success" xml:space="preserve">
+    <value>Время установлено, вы можете пользоваться приложением</value>
+    <comment>Успешно установлено время</comment>
+  </data>
+  <data name="TimeSet_WrongTimeRange" xml:space="preserve">
+    <value>Ошибка диапазона времени. Время должно быть в диапазоне 00:00 - 23:59.</value>
+    <comment>Введён не правльный диапазон</comment>
   </data>
 </root>

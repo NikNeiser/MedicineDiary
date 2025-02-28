@@ -9,7 +9,7 @@ namespace MedicineDiary.BotLogic.Handlers
         public async Task<string> HandleAsync(long chatId, string message)
         {
             await base._repository.SetChatState(chatId,ChatStateEnum.AddChatTime);
-            return "GetTimeMessage";
+            return Resources.Resource.GetTimeMessage;
         }
         public NoRegistredHandler(IDiaryRepository repository): base(repository) { }
     }

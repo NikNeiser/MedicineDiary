@@ -73,11 +73,38 @@ namespace MedicineDiary.BotLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Для определения часового пояса требуется ввести твоё текущее время в формате ЧЧ:MM.
+        ///   Looks up a localized string similar to Для определения часового пояса требуется ввести твоё текущее время в 24-часовом формате ЧЧ:MM.
         /// </summary>
         internal static string GetTimeMessage {
             get {
                 return ResourceManager.GetString("GetTimeMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Время установлено, вы можете пользоваться приложением.
+        /// </summary>
+        internal static string TimeSet_Success {
+            get {
+                return ResourceManager.GetString("TimeSet_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ошибка при установке времени, введите еще раз ваше текушее время в 24-часовом формате ЧЧ:ММ (напимер 14:46).
+        /// </summary>
+        internal static string TimeSet_WrongTimeFormat {
+            get {
+                return ResourceManager.GetString("TimeSet_WrongTimeFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ошибка диапазона времени. Время должно быть в диапазоне 00:00 - 23:59..
+        /// </summary>
+        internal static string TimeSet_WrongTimeRange {
+            get {
+                return ResourceManager.GetString("TimeSet_WrongTimeRange", resourceCulture);
             }
         }
     }
