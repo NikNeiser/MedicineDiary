@@ -15,7 +15,7 @@ namespace MedicineDiary.Tests
         public HandlersTests()
         {
             _repository = new RepositoryFactory().GetDiaryRepository(base.dbConnection, MessengerEnum.telegram);
-            _handlers = HandlerFactory.GetHandlers(_repository);
+            _handlers = HandlerFactory.GetMessageHandlers(_repository);
             _repository.GetChatState(_chatId);
         }
 

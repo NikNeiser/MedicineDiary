@@ -30,7 +30,7 @@ namespace MedicineDiary.BotLogic
         public BotLogic(string connection, MessengerEnum messenger)
         {
             _repository = new RepositoryFactory().GetDiaryRepository(connection, messenger);           
-            _handlers = HandlerFactory.GetHandlers(_repository);
+            _handlers = HandlerFactory.GetMessageHandlers(_repository);
         }
 
     }
