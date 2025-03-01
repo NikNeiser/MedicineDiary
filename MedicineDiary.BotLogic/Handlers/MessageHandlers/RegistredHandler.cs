@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MedicineDiary.BotLogic.Handlers
+namespace MedicineDiary.BotLogic.Handlers.MessageHandlers
 {
     internal class RegistredHandler : HandlerBase, IHandler
     {

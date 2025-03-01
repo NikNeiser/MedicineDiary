@@ -3,7 +3,7 @@ using MedicineDiary.Data.Abstraction;
 using MedicineDiary.Models.Enums;
 using System.Globalization;
 
-namespace MedicineDiary.BotLogic.Handlers
+namespace MedicineDiary.BotLogic.Handlers.ComandHandlers
 {
     internal class ChangeLanguageComandHandler : HandlerBase, IHandler
     {
@@ -11,6 +11,6 @@ namespace MedicineDiary.BotLogic.Handlers
         {
             return null;
         }
-        public ChangeLanguageComandHandler(IDiaryRepository repository): base(repository) { }
+        public ChangeLanguageComandHandler(IDiaryRepository repository) : base(repository) { }
     }
 }

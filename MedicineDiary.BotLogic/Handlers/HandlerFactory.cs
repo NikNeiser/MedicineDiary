@@ -1,4 +1,6 @@
 ﻿using MedicineDiary.BotLogic.Abstractions;
+using MedicineDiary.BotLogic.Handlers.ComandHandlers;
+using MedicineDiary.BotLogic.Handlers.MessageHandlers;
 using MedicineDiary.Data.Abstraction;
 using MedicineDiary.Models.Enums;
 
