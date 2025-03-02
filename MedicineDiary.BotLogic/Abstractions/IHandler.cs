@@ -1,7 +1,9 @@
-﻿namespace MedicineDiary.BotLogic.Abstractions
+﻿using MedicineDiary.Models.Dto.Input;
+
+namespace MedicineDiary.BotLogic.Abstractions
 {
     public interface IHandler
     {
-        Task<string> HandleAsync(long chatId, string message);
+        Task<string> HandleAsync(HandlerInput input);
     }
 }

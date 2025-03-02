@@ -2,6 +2,7 @@
 using MedicineDiary.BotLogic.Handlers;
 using MedicineDiary.Data;
 using MedicineDiary.Data.Abstraction;
+using MedicineDiary.Models.Dto.Input;
 using MedicineDiary.Models.Enums;
 
 namespace MedicineDiary.BotLogic
@@ -23,7 +24,12 @@ namespace MedicineDiary.BotLogic
         public async Task<string> MessageHandler(long chatId, string message)
         {
             var state = await _repository.GetChatState(chatId);
-            var answer = await _handlers[(ChatStateEnum)state.State].HandleAsync(chatId,message);
+            var handlerInput = new HandlerInput() {
+                ChatId = chatId,
+                Message = message,
+                Language = state.Language,
+            };
+            var answer = await _handlers[(ChatStateEnum)state.State].HandleAsync(handlerInput);
             return answer;
         }
 
