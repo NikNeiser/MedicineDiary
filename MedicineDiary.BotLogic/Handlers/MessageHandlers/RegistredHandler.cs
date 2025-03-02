@@ -1,16 +1,13 @@
 ﻿using MedicineDiary.BotLogic.Abstractions;
 using MedicineDiary.Data.Abstraction;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MedicineDiary.Models.Dto.Input;
+using MedicineDiary.Models.Dto.Output;
 
 namespace MedicineDiary.BotLogic.Handlers.MessageHandlers
 {
     internal class RegistredHandler : HandlerBase, IHandler
     {
-        public Task<string> HandleAsync(long chatId, string message)
+        public Task<HandlerOutput> HandleAsync(HandlerInput input)
         {
             throw new NotImplementedException();
         }

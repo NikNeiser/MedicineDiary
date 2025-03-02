@@ -61,6 +61,15 @@ namespace MedicineDiary.BotLogic.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Выберите требуемый язык из поддерживаемых / Select the desired language from the supported ones.
+        /// </summary>
+        internal static string Change_Language {
+            get {
+                return ResourceManager.GetString("Change_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Препарат : {0}, 
         ///Частота приёма:  {1} р. в д., 
         ///Кол-во дней: {2} (всего {3} приёмов),

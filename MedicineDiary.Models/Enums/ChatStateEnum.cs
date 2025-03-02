@@ -48,7 +48,12 @@
         /// <summary>
         /// Принято ли последнее лекарство
         /// </summary>
-        MedicineTaken = 8
+        MedicineTaken = 8,
+
+        /// <summary>
+        /// Ожидание изменения языка чата
+        /// </summary>
+        ChangeLanguage = 9
 
     }
 }

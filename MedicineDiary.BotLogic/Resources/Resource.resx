@@ -140,4 +140,8 @@
     <value>Ошибка диапазона времени. Время должно быть в диапазоне 00:00 - 23:59.</value>
     <comment>Введён не правльный диапазон</comment>
   </data>
+  <data name="Change_Language" xml:space="preserve">
+    <value>Выберите требуемый язык из поддерживаемых / Select the desired language from the supported ones</value>
+    <comment>Изменение языка чата</comment>
+  </data>
 </root>

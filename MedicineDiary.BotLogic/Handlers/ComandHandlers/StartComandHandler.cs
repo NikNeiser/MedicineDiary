@@ -1,5 +1,7 @@
 ﻿using MedicineDiary.BotLogic.Abstractions;
 using MedicineDiary.Data.Abstraction;
+using MedicineDiary.Models.Dto.Input;
+using MedicineDiary.Models.Dto.Output;
 using MedicineDiary.Models.Enums;
 using System.Globalization;
 
@@ -7,7 +9,7 @@ namespace MedicineDiary.BotLogic.Handlers.ComandHandlers
 {
     internal class StartComandHandler : HandlerBase, IHandler
     {
-        public async Task<string> HandleAsync(long chatId, string message)
+        public async Task<HandlerOutput> HandleAsync(HandlerInput input)
         {
             return null;
         }

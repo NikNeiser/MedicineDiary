@@ -135,4 +135,7 @@ Reception time: {3}</value>
   <data name="TimeSet_WrongTimeRange" xml:space="preserve">
     <value>Time range error. The time should be in the range of 00:00 - 23:59.</value>
   </data>
+  <data name="Change_Language" xml:space="preserve">
+    <value>Выберите требуемый язык из поддерживаемых / Select the desired language from the supported ones</value>
+  </data>
 </root>
