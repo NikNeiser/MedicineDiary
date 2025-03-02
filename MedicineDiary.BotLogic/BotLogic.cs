@@ -23,7 +23,7 @@ namespace MedicineDiary.BotLogic
         public async Task<string> MessageHandler(long chatId, string message)
         {
             var state = await _repository.GetChatState(chatId);
-            var answer = await _handlers[state].HandleAsync(chatId,message);
+            var answer = await _handlers[(ChatStateEnum)state.State].HandleAsync(chatId,message);
             return answer;
         }
 

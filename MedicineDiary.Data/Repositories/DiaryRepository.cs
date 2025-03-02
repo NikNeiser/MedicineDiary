@@ -2,6 +2,11 @@
 using MedicineDiary.Models.Enums;
 using Dapper;
 using Npgsql;
+using MedicineDiary.Models.Dto.Output;
+using MedicineDiary.Data.TypeHandlers;
+using System.Runtime.InteropServices.JavaScript;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace MedicineDiary.Data.Repositories
 {
@@ -11,15 +16,17 @@ namespace MedicineDiary.Data.Repositories
             :base(connection, messenger )
         {
         }
-        public async Task<ChatStateEnum> GetChatState(long id)
+        public async Task<GetStateOutput> GetChatState(long id)
         {
             using var connection = new NpgsqlConnection(base._connectionString);
+
             var parameters = new DynamicParameters();
             parameters.Add("@messenger", base._messenger.ToString());
             parameters.Add("@id", id);
             var query = @"SELECT function.get_state_or_add_id(@messenger,@id)";
-            var result = await connection.ExecuteAsync(query, parameters);
-            return (ChatStateEnum)result;
+            var jsonResult= await connection.QueryFirstOrDefaultAsync<string>(query, parameters);
+
+            return JsonConvert.DeserializeObject<GetStateOutput>(jsonResult);
         }
         public async Task<ChatStateEnum> SetChatState(long id, ChatStateEnum chatState)
         {
