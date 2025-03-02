@@ -3,9 +3,6 @@ using MedicineDiary.Models.Enums;
 using Dapper;
 using Npgsql;
 using MedicineDiary.Models.Dto.Output;
-using MedicineDiary.Data.TypeHandlers;
-using System.Runtime.InteropServices.JavaScript;
-using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
 namespace MedicineDiary.Data.Repositories
