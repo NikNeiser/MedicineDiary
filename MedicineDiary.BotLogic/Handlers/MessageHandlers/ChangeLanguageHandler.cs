@@ -27,7 +27,7 @@ namespace MedicineDiary.BotLogic.Handlers.MessageHandlers
 
             var newLang =  await _repository.SetChatLanguage(input.ChatId, language);
 
-            var culture = newLang.ToString() == LanguageEnum.ru.ToString() ?
+            var culture = newLang == LanguageEnum.ru ?
             CultureInfo.CurrentCulture :
             new CultureInfo(newLang.ToString());
 
