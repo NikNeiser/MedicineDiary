@@ -4,6 +4,7 @@ using Dapper;
 using Npgsql;
 using MedicineDiary.Models.Dto.Output;
 using Newtonsoft.Json;
+using System.Transactions;
 
 namespace MedicineDiary.Data.Repositories
 {
@@ -37,5 +38,30 @@ namespace MedicineDiary.Data.Repositories
             await connection.ExecuteAsync(query,parameters);
             return chatState;
         }
+
+        public async Task<LanguageEnum> SetChatLanguage(long id, LanguageEnum language)
+        {
+            using var connection = new NpgsqlConnection(base._connectionString);
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@language", language.ToString());
+            parameters.Add("@id", id);
+            parameters.Add("@state1", ((int)ChatStateEnum.Registred));
+            parameters.Add("@state2", ((int)ChatStateEnum.NoRegistred));
+
+            var query =
+                $"UPDATE {base._messenger.ToString()}.users " +
+                $"SET \"language\" = @language," +
+                $"\"state\" = CASE" +
+                    $"WHEN \"timeDelta\" IS NULL THEN @state2" +
+                    $"ELSE @state1" +
+                    $"END" +
+                $"WHERE \"chatId\" = @id;";
+
+            await connection.ExecuteAsync(query, parameters);
+
+            return language;
+        }
+
     }
 }
