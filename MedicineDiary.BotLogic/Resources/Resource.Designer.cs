@@ -91,6 +91,24 @@ namespace MedicineDiary.BotLogic.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Язык чата изменён.
+        /// </summary>
+        internal static string LanguageSet_Success {
+            get {
+                return ResourceManager.GetString("LanguageSet_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unsupported language is selected, select from the list of available languages: {0}.
+        /// </summary>
+        internal static string LanguageSet_WrongLanguage {
+            get {
+                return ResourceManager.GetString("LanguageSet_WrongLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Время установлено, вы можете пользоваться приложением.
         /// </summary>
         internal static string TimeSet_Success {

@@ -138,4 +138,10 @@ Reception time: {3}</value>
   <data name="Change_Language" xml:space="preserve">
     <value>Выберите требуемый язык из поддерживаемых / Select the desired language from the supported ones</value>
   </data>
+  <data name="LanguageSet_WrongLanguage" xml:space="preserve">
+    <value>An unsupported language is selected, select from the list of available languages: {0}</value>
+  </data>
+  <data name="LanguageSet_Success" xml:space="preserve">
+    <value>The chat language has been changed</value>
+  </data>
 </root>
