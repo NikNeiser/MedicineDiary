@@ -11,7 +11,7 @@ namespace MedicineDiary.BotLogic.Handlers.MessageHandlers
     {
         public async Task<HandlerOutput> HandleAsync(HandlerInput input)
         {
-            var culture = input.Language == "ru" ?
+            var culture = input.Language == LanguageEnum.ru.ToString()?
                 CultureInfo.CurrentCulture :
                 new CultureInfo(input.Language);
 
