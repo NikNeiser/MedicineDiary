@@ -10,13 +10,31 @@ namespace MedicineDiary.BotLogic.Handlers.MessageHandlers
     internal class ChangeLanguageHandler : HandlerBase, IHandler
     {
         public async Task<HandlerOutput> HandleAsync(HandlerInput input)
-        { 
+        {
+            CultureInfo culture;
+            //Если поступил текущий язык
+            if (input.Language == input.Message)
+            {
+                culture = input.Language == LanguageEnum.ru.ToString() ?
+                    CultureInfo.CurrentCulture :
+                    new CultureInfo(input.Language);
+
+                var answer = new HandlerOutput
+                {
+                    Message = string.Format(
+                        Resources.Resource.ResourceManager.GetString("LanguageSet_NotRequired", culture),
+                        input.Language)
+                };
+
+                return answer;
+            }
+
             //Если поступил непотдерживаемый язык
-            if (Enum.TryParse<LanguageEnum>(input.Language.ToLower(), out var language))
+            if (!Enum.TryParse<LanguageEnum>(input.Message.ToLower(), out var language))
             {
                 var erroranswer = new HandlerOutput
                 {
-                    AnswerVariants = Enum.GetValues(typeof(LanguageEnum)).Cast<string>().ToList(),
+                    AnswerVariants = Enum.GetNames(typeof(LanguageEnum)).ToList<string>(),
                     Message = string.Format(
                         Resources.Resource.LanguageSet_WrongLanguage,
                         string.Join(", ",Enum.GetNames(typeof(LanguageEnum))))                        
@@ -27,9 +45,9 @@ namespace MedicineDiary.BotLogic.Handlers.MessageHandlers
 
             var newLang =  await _repository.SetChatLanguage(input.ChatId, language);
 
-            var culture = newLang == LanguageEnum.ru ?
-            CultureInfo.CurrentCulture :
-            new CultureInfo(newLang.ToString());
+            culture = newLang == LanguageEnum.ru ?
+                CultureInfo.CurrentCulture :
+                new CultureInfo(newLang.ToString());
 
             var output = new HandlerOutput {
                 Message = Resources.Resource.ResourceManager.GetString("LanguageSet_Success", culture)

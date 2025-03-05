@@ -30,7 +30,7 @@ namespace MedicineDiary.BotLogic
                 Language = state.Language,
             };
             var answer = await _handlers[(ChatStateEnum)state.State].HandleAsync(handlerInput);
-            return answer;
+            return answer.Message;
         }
 
         public BotLogic(string connection, MessengerEnum messenger)

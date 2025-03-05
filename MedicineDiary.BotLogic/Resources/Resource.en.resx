@@ -144,4 +144,7 @@ Reception time: {3}</value>
   <data name="LanguageSet_Success" xml:space="preserve">
     <value>The chat language has been changed</value>
   </data>
+  <data name="LanguageSet_NotRequired" xml:space="preserve">
+    <value>You already have the language set {0}</value>
+  </data>
 </root>

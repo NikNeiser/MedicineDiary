@@ -51,11 +51,11 @@ namespace MedicineDiary.Data.Repositories
 
             var query =
                 $"UPDATE {base._messenger.ToString()}.users " +
-                $"SET \"language\" = @language," +
-                $"\"state\" = CASE" +
-                    $"WHEN \"timeDelta\" IS NULL THEN @state2" +
-                    $"ELSE @state1" +
-                    $"END" +
+                $"SET \"language\" = @language, " +
+                $"\"state\" = CASE " +
+                    $"WHEN \"timeDelta\" IS NULL THEN @state2 " +
+                    $"ELSE @state1 " +
+                    $"END " +
                 $"WHERE \"chatId\" = @id;";
 
             await connection.ExecuteAsync(query, parameters);

@@ -152,4 +152,8 @@
     <value>Язык чата изменён</value>
     <comment>Сообщение при удачной смене языка чата</comment>
   </data>
+  <data name="LanguageSet_NotRequired" xml:space="preserve">
+    <value>У вас уже установлен язык {0}</value>
+    <comment>когда изменяемый и текущий языки совпадают</comment>
+  </data>
 </root>

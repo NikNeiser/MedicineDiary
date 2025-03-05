@@ -91,6 +91,15 @@ namespace MedicineDiary.BotLogic.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to У вас уже установлен язык {0}.
+        /// </summary>
+        internal static string LanguageSet_NotRequired {
+            get {
+                return ResourceManager.GetString("LanguageSet_NotRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Язык чата изменён.
         /// </summary>
         internal static string LanguageSet_Success {
