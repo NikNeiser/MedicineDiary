@@ -130,7 +130,7 @@ Reception time: {3}</value>
     <value>Error when setting the time, enter your current time again in 24-hour format HH:MM (for example, 14:46)</value>
   </data>
   <data name="TimeSet_Success" xml:space="preserve">
-    <value>The time is set, you can use the app.</value>
+    <value>The time is set, your deviation from UTC is {0}.  You can use the app.</value>
   </data>
   <data name="TimeSet_WrongTimeRange" xml:space="preserve">
     <value>Time range error. The time should be in the range of 00:00 - 23:59.</value>

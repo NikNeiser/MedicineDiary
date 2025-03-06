@@ -63,5 +63,25 @@ namespace MedicineDiary.Data.Repositories
             return language;
         }
 
+        public async Task<bool> SetChatTimeDelta(long id, TimeSpan timeDelta)
+        {
+            using var connection = new NpgsqlConnection(base._connectionString);
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@timeDelta", timeDelta);
+            parameters.Add("@id", id);
+            parameters.Add("@state", ((int)ChatStateEnum.Registred));
+
+            var query =
+                $"UPDATE {base._messenger.ToString()}.users " +
+                $"SET \"timeDelta\" = @timeDelta, " +
+                $"\"state\" = @state " +
+                $"WHERE \"chatId\" = @id;";
+
+            await connection.ExecuteAsync(query, parameters);
+
+            return true;
+        }
+
     }
 }

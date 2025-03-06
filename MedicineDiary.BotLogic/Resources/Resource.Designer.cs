@@ -118,7 +118,7 @@ namespace MedicineDiary.BotLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Время установлено, вы можете пользоваться приложением.
+        ///   Looks up a localized string similar to Время установлено, Ваше отклонение от UTC {0}.  Вы можете пользоваться приложением.
         /// </summary>
         internal static string TimeSet_Success {
             get {

@@ -9,5 +9,6 @@ namespace MedicineDiary.Data.Abstraction
         Task<GetStateOutput> GetChatState(long id);
         Task<ChatStateEnum> SetChatState(long id, ChatStateEnum chatState);
         Task<LanguageEnum> SetChatLanguage(long id, LanguageEnum language);
+        Task<bool> SetChatTimeDelta(long id, TimeSpan timeDelta);
     }
 }

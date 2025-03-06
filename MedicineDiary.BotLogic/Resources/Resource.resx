@@ -133,7 +133,7 @@
     <comment>Общая ошибка парсинга значения</comment>
   </data>
   <data name="TimeSet_Success" xml:space="preserve">
-    <value>Время установлено, вы можете пользоваться приложением</value>
+    <value>Время установлено, Ваше отклонение от UTC {0}.  Вы можете пользоваться приложением</value>
     <comment>Успешно установлено время</comment>
   </data>
   <data name="TimeSet_WrongTimeRange" xml:space="preserve">

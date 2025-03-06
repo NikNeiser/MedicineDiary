@@ -12,7 +12,8 @@ namespace MedicineDiary.BotLogic.Handlers
             new Dictionary<ChatStateEnum, IHandler> {
                 { ChatStateEnum.NoRegistred, new NoRegistredHandler(repository) },
                 { ChatStateEnum.Registred, new RegistredHandler(repository) },
-                { ChatStateEnum.ChangeLanguage, new ChangeLanguageHandler(repository) }
+                { ChatStateEnum.ChangeLanguage, new ChangeLanguageHandler(repository) },
+                { ChatStateEnum.AddChatTime, new AddChatTimeHandler(repository) }
             };
 
         public static Dictionary<BotComandsEnum, IHandler> GetComandsHandlers(IDiaryRepository repository) =>
