@@ -24,7 +24,6 @@ namespace MedicineDiary.Tests
         [InlineData("10. 30")]
         [InlineData("9. 30")]
         [InlineData("5 24")]
-        [InlineData("15")]
         public async void AddChatTimeHandlerParseTimeTest(string time)
         {
 
@@ -32,6 +31,17 @@ namespace MedicineDiary.Tests
 
             _output.WriteLine(result.ToString());
             Assert.NotNull(result);
+        }
+
+        [Theory]
+        [InlineData("25awscqa2214")]
+        [InlineData("15")]
+        [InlineData("1")]
+        [InlineData("f")]
+        [InlineData("14129")]
+        public async void AddChatTimeHandlerParseTimeExeptionsTest(string time)
+        {
+            Assert.Throws<FormatException>(() => AddChatTimeHandler.ParseTime(time));
         }
 
         [Theory]
