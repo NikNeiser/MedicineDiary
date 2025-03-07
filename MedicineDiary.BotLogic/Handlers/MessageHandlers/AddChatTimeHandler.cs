@@ -49,13 +49,13 @@ namespace MedicineDiary.BotLogic.Handlers.MessageHandlers
             input = Regex.Replace(input, @"[^0-9]+", "");
 
             // Проверяем, что строка соответствует формату ЧЧММ
-            if (string.IsNullOrEmpty(input) || input.Length != 4)
+            if (string.IsNullOrEmpty(input) || input.Length < 3 || input.Length > 4)
             {
                 throw new FormatException("TimeSet_WrongTimeFormat");
             }
 
-            int hours = int.Parse(input.Substring(0, 2));
-            int minutes = int.Parse(input.Substring(2, 2));
+            int hours = int.Parse(input.Substring(0, input.Length-2));
+            int minutes = int.Parse(input.Substring(input.Length - 2, 2));
 
             // Проверяем, что часы и минуты находятся в допустимом диапазоне
             if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59)

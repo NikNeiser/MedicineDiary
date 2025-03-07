@@ -22,6 +22,9 @@ namespace MedicineDiary.Tests
         [InlineData(" 10/30")]
         [InlineData("10:30")]
         [InlineData("10. 30")]
+        [InlineData("9. 30")]
+        [InlineData("5 24")]
+        [InlineData("15")]
         public async void AddChatTimeHandlerParseTimeTest(string time)
         {
 
