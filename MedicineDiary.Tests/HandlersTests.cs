@@ -36,7 +36,9 @@ namespace MedicineDiary.Tests
                 Language = language.ToString()
             };
 
-            var result = await _handlers[ChatStateEnum.NoRegistred].HandleAsync(input);
+            IHandler handler = new NoRegistredHandler(_repository);
+            var result = await handler.HandleAsync(input);
+
             _output.WriteLine(result.Message);
             Assert.NotNull(result);
         }
@@ -57,7 +59,9 @@ namespace MedicineDiary.Tests
                 Language = currentLanguage
             };
 
-            var result = await _handlers[ChatStateEnum.ChangeLanguage].HandleAsync(input);
+            IHandler handler = new ChangeLanguageHandler(_repository);
+            var result = await handler.HandleAsync(input);
+
             _output.WriteLine(result.Message);
             Assert.NotNull(result);
         }
@@ -78,7 +82,9 @@ namespace MedicineDiary.Tests
                 Language = currentLanguage
             };
 
-            var result = await _handlers[ChatStateEnum.AddChatTime].HandleAsync(input);
+            IHandler handler = new AddChatTimeHandler(_repository);
+            var result = await handler.HandleAsync(input);
+
             _output.WriteLine(result.Message);
             Assert.NotNull(result);
         }
